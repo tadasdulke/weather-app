@@ -1,0 +1,7 @@
+{
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "target": "development"
+  },
+  "appPort": [3000]
+}

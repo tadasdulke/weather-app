@@ -4,6 +4,12 @@
 @include include-font('Helvetica Neue Medium', 600, helveticaneue-medium);
 @include include-font('Avenir Next Medium', 500, avenir-next-medium);
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   font-family: 'Helvetica Neue Light';
 }
@@ -11,5 +17,4 @@ html {
 body {
   background-color: #3a424c;
   color: #ffffff;
-  margin: 0;
 }

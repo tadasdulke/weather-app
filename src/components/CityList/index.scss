@@ -1,7 +1,6 @@
 .CityList {
   &__list {
     list-style-type: none;
-    margin: 0;
     padding: {
       left: 37px;
     }
@@ -23,9 +22,9 @@
     color: #9fa0a5;
     padding: {
       top: 24px;
-      bottom: 24px;
+      bottom: 28px;
     }
-    font-size: 24px;
+    font-size: 28px;
 
     &--white {
       color: #ffffff;

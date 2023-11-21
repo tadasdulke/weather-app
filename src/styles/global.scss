@@ -1,0 +1,15 @@
+@import "./mixins/include-font.scss";
+@include include-font("Helvetica Neue Thin", 400, helveticaneue-thin);
+@include include-font("Helvetica Neue Light", 500, helveticaneue-light);
+@include include-font("Helvetica Neue Medium", 600, helveticaneue-medium);
+@include include-font("Avenir Next Medium", 500, avenir-next-medium);
+
+html {
+  font-family: "Helvetica Neue Light";
+}
+
+body {
+  background-color: #3a424c;
+  color: #ffffff;
+  margin: 0;
+}

@@ -1,0 +1,27 @@
+.Navigation {
+  &__container {
+    background-color: #3a424c;
+    padding: {
+      top: 11px;
+      bottom: 11px;
+      left: 25px;
+      right: 25px;
+    }
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__left {
+    align-self: flex-start;
+  }
+
+  &__center {
+    align-self: center;
+  }
+
+  &__right {
+    align-self: flex-end;
+  }
+}

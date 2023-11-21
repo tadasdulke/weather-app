@@ -1,0 +1,43 @@
+.InputField {
+  &__container {
+    display: flex;
+    align-items: center;
+
+    border: 1px solid #54c7fc;
+    border-radius: 8px;
+    background-color: #4e555e;
+
+    padding: {
+      top: 12px;
+      bottom: 12px;
+      left: 16px;
+      right: 17px;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    border: none;
+    background-color: inherit;
+    color: white;
+    flex-grow: 2;
+    min-width: 0;
+    padding: {
+      left: 22px;
+    }
+    font-size: 29px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

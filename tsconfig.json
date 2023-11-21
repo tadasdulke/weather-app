@@ -3,7 +3,6 @@
     "noEmit": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
-    "exactOptionalPropertyTypes": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitThis": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -26,9 +25,17 @@
     "esModuleInterop": true,
     "isolatedModules": true,
     "paths": {
-      "~components/*": ["src/components/*"]
+      "~components/*": ["src/components/*"],
+      "~pages/*": ["src/pages/*"],
+      "~layouts/*": ["src/layouts/*"],
+      "~images/*": ["assets/images/*"],
+      "~data/*": ["data/*"],
+      "~types/*": ["types/*"],
+      "~services/*": ["services/*"],
+      "~hooks/*": ["src/hooks/*"],
+      "~utils/*": ["src/utils/*"]
     }
   },
-  "include": ["src/**/**/*"],
+  "include": ["src/**/**/*", "src/types/*"],
   "exclude": ["node_modules"]
 }

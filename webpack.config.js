@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
+const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 module.exports = {
   mode: "development", // TODO: change to env var
@@ -13,6 +14,7 @@ module.exports = {
   devServer: {
     static: "./dist",
     port: 3000,
+    historyApiFallback: true,
   },
   module: {
     rules: [
@@ -20,6 +22,15 @@ module.exports = {
         test: /\.tsx?$/,
         exclude: /node_modules/,
         loader: "babel-loader",
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        use: ["@svgr/webpack"],
       },
     ],
   },
@@ -31,5 +42,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
+    new ForkTsCheckerWebpackPlugin(),
   ],
 };

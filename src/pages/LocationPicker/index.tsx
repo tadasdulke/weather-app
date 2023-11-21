@@ -3,14 +3,18 @@ import InputField from '~components/InputField';
 import useSearchCitiesService from '~hooks/useSearchCitiesService';
 import { CitySearchConfig } from 'src/types/enums';
 import CityList from '~components/CityList';
+import useLocationContext from '~hooks/useLocationContext';
 import './index.scss';
 
 const LocationPicker = () => {
+  const { setLocation, location } = useLocationContext();
   const [searchValue, setSearchValue] = useState<string>('');
   const cities = useSearchCitiesService(
     searchValue,
     CitySearchConfig.MaxAmountOfCitiesToDisplay
   );
+
+  console.log(location);
 
   return (
     <div>
@@ -22,7 +26,7 @@ const LocationPicker = () => {
         />
       </div>
 
-      <CityList cities={cities} />
+      <CityList onLocationSelect={setLocation} cities={cities} />
     </div>
   );
 };

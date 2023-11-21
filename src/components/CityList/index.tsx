@@ -1,27 +1,31 @@
-import { Searchable } from 'src/services/SearchService';
-import { City } from 'src/services/CitySearchService';
+import { SearchableCity, City } from 'src/services/CitySearchService';
 import Button from '~components/Button';
 import HighlightedText from '~components/HighlightedText';
 
 import './index.scss';
 
 interface CityListProps {
-  cities: Searchable<City>[];
+  cities: SearchableCity[];
+  onLocationSelect: (location: City) => void;
 }
 
-const CityList = ({ cities }: CityListProps) => (
+const CityList = ({ cities, onLocationSelect }: CityListProps) => (
   <ul className="CityList__list">
-    {cities.map(({ name, id, match }, index) => {
+    {cities.map((city, index) => {
       return (
         <li key={index} className="CityList__list-item">
-          <Button key={id} className="CityList__button">
+          <Button
+            key={city.id}
+            onClick={() => onLocationSelect(city)}
+            className="CityList__button"
+          >
             <HighlightedText
-              from={match.index}
-              to={match[0].length}
+              from={city.match.index}
+              to={city.match[0].length}
               className="CityList__name"
               highlightedClassName="CityList__name--white"
             >
-              {name}
+              {city.name}
             </HighlightedText>
           </Button>
           {index < cities.length - 1 && <div className="CityList__divider" />}

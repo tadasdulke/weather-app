@@ -6,12 +6,14 @@ export interface City {
   name: string;
 }
 
+export type SearchableCity = Searchable<City>;
+
 class CitySearchService extends SearchService<City> {
   constructor(maxCollectedElementsLength: number, collection: City[]) {
     super(maxCollectedElementsLength, collection);
   }
 
-  override search(valueToMatch: string): Searchable<City>[] {
+  override search(valueToMatch: string): SearchableCity[] {
     for (let i = 0; i < this.fullCollection.length; i++) {
       if (this.isFull()) {
         break;

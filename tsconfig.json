@@ -33,7 +33,8 @@
       "~types/*": ["types/*"],
       "~services/*": ["services/*"],
       "~hooks/*": ["src/hooks/*"],
-      "~utils/*": ["src/utils/*"]
+      "~utils/*": ["src/utils/*"],
+      "~context/*": ["src/context/*"]
     }
   },
   "include": ["src/**/**/*", "src/types/*", "./.eslintrc.js"],

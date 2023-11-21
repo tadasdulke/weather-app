@@ -15,7 +15,7 @@ const HighlightedText = ({
 }: HighlightedTextProps) => {
   const highlihed = children.substring(from, from + to);
   const prefix = children.slice(0, from);
-  const postfix = children.slice(to, children.length);
+  const postfix = children.slice(from + to, children.length);
 
   return (
     <p className={className}>

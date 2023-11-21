@@ -1,7 +1,7 @@
-import Navigation, { NavigationProps } from "~components/Navigation";
-import { Outlet } from "react-router-dom";
+import Navigation, { NavigationProps } from '~components/Navigation';
+import { Outlet } from 'react-router-dom';
 
-import "./index.scss";
+import './index.scss';
 
 interface BaseLayoutProps extends NavigationProps {}
 

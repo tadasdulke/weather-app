@@ -1,9 +1,9 @@
-import { Searchable } from "src/services/SearchService";
-import { City } from "src/services/CitySearchService";
-import Button from "~components/Button";
-import HighlightedText from "~components/HighlightedText";
+import { Searchable } from 'src/services/SearchService';
+import { City } from 'src/services/CitySearchService';
+import Button from '~components/Button';
+import HighlightedText from '~components/HighlightedText';
 
-import "./index.scss";
+import './index.scss';
 
 interface CityListProps {
   cities: Searchable<City>[];

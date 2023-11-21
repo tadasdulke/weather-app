@@ -1,5 +1,5 @@
 export enum Errors {
-  SomethingWentWrong = "Something went wrong!",
+  SomethingWentWrong = 'Something went wrong!',
 }
 
 export enum CitySearchConfig {

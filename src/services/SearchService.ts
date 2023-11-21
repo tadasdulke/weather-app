@@ -1,4 +1,4 @@
-import { Errors } from "src/types/enums";
+import { Errors } from 'src/types/enums';
 
 export type Searchable<T> = T & {
   match: RegExpExecArray;

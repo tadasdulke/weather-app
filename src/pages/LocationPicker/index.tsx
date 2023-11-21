@@ -7,14 +7,12 @@ import useLocationContext from '~hooks/useLocationContext';
 import './index.scss';
 
 const LocationPicker = () => {
-  const { setLocation, location } = useLocationContext();
+  const { setLocation } = useLocationContext();
   const [searchValue, setSearchValue] = useState<string>('');
   const cities = useSearchCitiesService(
     searchValue,
     CitySearchConfig.MaxAmountOfCitiesToDisplay
   );
-
-  console.log(location);
 
   return (
     <div>

@@ -24,4 +24,18 @@
   &__right {
     align-self: flex-end;
   }
+
+  &__text {
+    font-size: 28px;
+    text-align: left;
+    font-weight: 400;
+
+    &--white {
+      color: white;
+    }
+
+    &--darker {
+      color: #9fa0a5;
+    }
+  }
 }

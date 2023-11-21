@@ -15,7 +15,6 @@ const defaultLocation = {
 
 const App = () => {
   const [location, setLocation] = useState<City>(defaultLocation);
-
   return (
     <LocationContext.Provider value={{ location, setLocation }}>
       <Router />

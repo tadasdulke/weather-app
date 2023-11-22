@@ -15,6 +15,7 @@ const router = createBrowserRouter([
   {
     element: (
       <BaseLayout
+        pagename="Weather Forecast"
         left={
           <Link to={Routes.SelectLocation}>
             <CloudIcon width={50} height={50} />
@@ -35,7 +36,12 @@ const router = createBrowserRouter([
     ],
   },
   {
-    element: <BaseLayout left={<Link to={Routes.Homepage}>Done</Link>} />,
+    element: (
+      <BaseLayout
+        pagename="Location"
+        left={<Link to={Routes.Homepage}>Done</Link>}
+      />
+    ),
     children: [
       {
         path: Routes.SelectLocation,

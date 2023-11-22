@@ -4,18 +4,18 @@ export interface NavigationProps {
   right?: JSX.Element;
   left?: JSX.Element;
   location: string;
+  pagename: string;
 }
 
-const Navigation = ({ right, left, location }: NavigationProps) => {
+const Navigation = ({ right, left, location, pagename }: NavigationProps) => {
   return (
     <nav className="Navigation__container">
-      <div className="Navigation__left">{left}</div>
-      <div className="Navigation__center">
-        {/* change to h1 and h2 */}
-        <p className="Navigation__text--white">Location</p>
-        <p className="Navigation__text--darker">{location}</p>
+      <div className="Navigation__item Navigation__item--left">{left}</div>
+      <div className="Navigation__item Navigation__item--center Navigation__text-container">
+        <h1 className="Navigation__text--white">{pagename}</h1>
+        <h2 className="Navigation__text--darker">{location}</h2>
       </div>
-      <div>{right}</div>
+      <div className="Navigation__item Navigation__item--right">{right}</div>
     </nav>
   );
 };

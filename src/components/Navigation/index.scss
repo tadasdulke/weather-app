@@ -9,26 +9,34 @@
     }
 
     display: flex;
-    justify-content: center;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex: 1 1 0px;
+
+    &--left {
+      justify-content: start;
+    }
+
+    &--center {
+      justify-content: center;
+    }
+
+    &--right {
+      justify-content: end;
+    }
+  }
+
+  &__text-container {
+    align-items: center;
     flex-direction: column;
-  }
-
-  &__left {
-    align-self: flex-start;
-  }
-
-  &__center {
-    align-self: center;
-  }
-
-  &__right {
-    align-self: flex-end;
   }
 
   &__text {
     font-size: 28px;
-    text-align: left;
-    font-weight: 400;
+    font-weight: 400 !important;
 
     &--white {
       color: white;

@@ -1,5 +1,5 @@
 const Homepage = () => {
-  return 'test';
+  return process.env.OPEN_WEATHER_API_KEY;
 };
 
 export default Homepage;

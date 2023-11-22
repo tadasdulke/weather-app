@@ -1,4 +1,4 @@
-import { SearchableCity, City } from 'src/services/CitySearchService';
+import { type SearchableCity, type City } from 'src/services/CitySearchService';
 import Button from '~components/Button';
 import HighlightedText from '~components/HighlightedText';
 
@@ -17,7 +17,7 @@ const CityList = ({ cities, onLocationSelect }: CityListProps) => {
           <li key={index} className="CityList__list-item">
             <Button
               key={city.id}
-              onClick={() => onLocationSelect(city)}
+              onClick={() => { onLocationSelect(city); }}
               className="CityList__button"
             >
               <HighlightedText

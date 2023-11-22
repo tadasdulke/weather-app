@@ -1,4 +1,4 @@
-import SearchService, { Searchable } from './SearchService';
+import SearchService, { type Searchable } from './SearchService';
 import regexMatch from '~utils/regexMatch';
 
 export interface City {
@@ -9,10 +9,6 @@ export interface City {
 export type SearchableCity = Searchable<City>;
 
 class CitySearchService extends SearchService<City> {
-  constructor(maxCollectedElementsLength: number, collection: City[]) {
-    super(maxCollectedElementsLength, collection);
-  }
-
   override search(valueToMatch: string): SearchableCity[] {
     for (let i = 0; i < this.fullCollection.length; i++) {
       if (this.isFull()) {
@@ -25,7 +21,7 @@ class CitySearchService extends SearchService<City> {
         city.name.toLowerCase()
       );
 
-      if (!!regex) {
+      if (regex !== null) {
         this.addElement({
           match: regex,
           ...city,

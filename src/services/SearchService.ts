@@ -8,13 +8,13 @@ interface ISearchService<T> {
   collectedElements: T[];
   fullCollection: T[];
   maxCollectedElementsLength: number;
-  search: (valueToMatch: string) => Searchable<T>[];
+  search: (valueToMatch: string) => Array<Searchable<T>>;
   isFull: () => boolean;
   addElement: (element: Searchable<T>) => void;
 }
 
 abstract class SearchService<T> implements ISearchService<T> {
-  collectedElements: Searchable<T>[];
+  collectedElements: Array<Searchable<T>>;
   fullCollection: T[];
   maxCollectedElementsLength: number;
 
@@ -36,7 +36,7 @@ abstract class SearchService<T> implements ISearchService<T> {
     this.collectedElements = [...this.collectedElements, element];
   }
 
-  abstract search(valueToMatch: string): Searchable<T>[];
+  abstract search(valueToMatch: string): Array<Searchable<T>>;
 }
 
 export default SearchService;

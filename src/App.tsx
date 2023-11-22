@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Router from '~components/Router';
 import LocationContext from '~context/LocationContext';
-import { City } from './services/CitySearchService';
+import { type City } from './services/CitySearchService';
 
 const defaultLocation = {
   id: 593116,

@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import { City } from 'src/services/CitySearchService';
+import { type City } from 'src/services/CitySearchService';
 
 interface LocationContextValue {
   location: City;

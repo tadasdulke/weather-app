@@ -5,7 +5,7 @@ import './styles/global.scss';
 
 const rootElement = document.getElementById('root');
 
-if (!rootElement) {
+if (rootElement === null) {
   throw new Error('Error: root element was not found');
 }
 

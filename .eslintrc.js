@@ -11,13 +11,28 @@ module.exports = {
     'plugin:react/recommended',
     'prettier',
   ],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint', 'import'],
+  root: true,
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
+    project: './tsconfig.json',
+    tsconfigRootDir: './',
   },
   settings: {
     react: {
       version: 'detect',
     },
+    'import/resolver': {
+      typescript: {},
+    },
   },
+  rules: {
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    'react/react-in-jsx-scope': 'off',
+  },
+  overrides: [
+    {
+      files: ['**/*.ts', '**/*.tsx'],
+    },
+  ],
 };

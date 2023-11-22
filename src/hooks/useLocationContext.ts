@@ -3,12 +3,13 @@ import LocationContext from '~context/LocationContext';
 import { Errors } from 'src/types/enums';
 
 const useLocationContext = () => {
-  const { setLocation, location } = useContext(LocationContext) || {};
-  if (!setLocation || !location) {
+  const locationContextValue = useContext(LocationContext);
+
+  if (locationContextValue === null) {
     throw new Error(Errors.NoLocationProvider);
   }
 
-  return { location, setLocation };
+  return locationContextValue;
 };
 
 export default useLocationContext;

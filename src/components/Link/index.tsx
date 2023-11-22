@@ -1,4 +1,4 @@
-import { LinkProps, Link as ReactRouterLink } from 'react-router-dom';
+import { type LinkProps, Link as ReactRouterLink } from 'react-router-dom';
 
 import './index.scss';
 

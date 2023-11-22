@@ -19,8 +19,8 @@ const LocationPicker = () => {
       <div className="LocationPicker__input-field-wrapper">
         <InputField
           value={searchValue}
-          onChange={(e) => setSearchValue(e.target.value)}
-          onClear={() => setSearchValue('')}
+          onChange={(e) => { setSearchValue(e.target.value); }}
+          onClear={() => { setSearchValue(''); }}
         />
       </div>
 

@@ -1,4 +1,4 @@
-import CitySearchService, { City } from 'src/services/CitySearchService';
+import CitySearchService, { type City } from 'src/services/CitySearchService';
 import useSearchService from '~hooks/useSearchService';
 import cities from '~data/cities.json';
 

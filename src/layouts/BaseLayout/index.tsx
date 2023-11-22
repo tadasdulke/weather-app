@@ -1,4 +1,4 @@
-import Navigation, { NavigationProps } from '~components/Navigation';
+import Navigation, { type NavigationProps } from '~components/Navigation';
 import { Outlet } from 'react-router-dom';
 import useLocationContext from '~hooks/useLocationContext';
 

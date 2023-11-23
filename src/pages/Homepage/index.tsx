@@ -8,7 +8,10 @@ import useWeatherForecast from '~hooks/useWeatherForecast';
 
 const Homepage = () => {
   const { location } = useLocationContext();
-  const { weatherForecast } = useWeatherForecast(location);
+  const { weatherForecast } = useWeatherForecast(
+    location.coord.lat,
+    location.coord.lon
+  );
 
   return (
     <>

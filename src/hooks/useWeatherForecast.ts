@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { type City } from 'src/services/CitySearchService';
 import axios from 'axios';
 
 type WeatherIconCode =
@@ -27,15 +26,15 @@ interface WeatherForecast {
   };
 }
 
-const useWeatherForecast = (location: City) => {
+const useWeatherForecast = (lat: number, lon: number) => {
   const [weatherForecast, setWeatherForecast] =
     useState<WeatherForecast | null>(null);
 
   useEffect(() => {
     void (async () => {
       const params = {
-        lat: location.coord.lat,
-        lon: location.coord.lon,
+        lat,
+        lon,
         units: 'metric',
         appId: process.env.OPEN_WEATHER_API_KEY,
       };
@@ -45,7 +44,7 @@ const useWeatherForecast = (location: City) => {
       );
       setWeatherForecast(forecast.data);
     })();
-  }, [location]);
+  }, [lat, lon]);
 
   return {
     weatherForecast,

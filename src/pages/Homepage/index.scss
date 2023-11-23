@@ -1,0 +1,68 @@
+.Homepage {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  &__background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('../../../assets/images/weather-map.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(100px);
+    -webkit-filter: blur(100px);
+    opacity: 50%;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  &__current-degrees {
+    font-size: 144px;
+    padding-bottom: 40px;
+    font-weight: 400;
+  }
+
+  &__location {
+    font-size: 58px;
+    font-weight: 500;
+  }
+
+  &__weather-type-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__weather-type {
+    margin-right: 13px;
+    font-size: 33px;
+    font-weight: 500;
+  }
+
+  &__forecast-temp {
+    font: {
+      size: 34px;
+    }
+
+    &--high {
+      margin-right: 15px;
+      font-weight: 500;
+    }
+
+    &--low {
+      font-weight: 400;
+    }
+  }
+}

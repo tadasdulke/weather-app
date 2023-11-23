@@ -4,6 +4,10 @@ import regexMatch from '~utils/regexMatch';
 export interface City {
   id: number;
   name: string;
+  coord: {
+    lon: number;
+    lat: number;
+  };
 }
 
 export type SearchableCity = Searchable<City>;

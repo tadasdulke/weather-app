@@ -6,11 +6,10 @@ import { type City } from './services/CitySearchService';
 const defaultLocation = {
   id: 593116,
   name: 'Vilnius',
-  // country: 'LT',
-  // coord: {
-  //   lon: 25.2798,
-  //   lat: 54.689159,
-  // },
+  coord: {
+    lon: 25.2798,
+    lat: 54.689159,
+  },
 };
 
 const App = () => {

@@ -1,8 +1,10 @@
 @import './mixins/include-font.scss';
-@include include-font('Helvetica Neue Thin', 400, helveticaneue-thin);
-@include include-font('Helvetica Neue Light', 500, helveticaneue-light);
-@include include-font('Helvetica Neue Medium', 600, helveticaneue-medium);
-@include include-font('Avenir Next Medium', 500, avenir-next-medium);
+
+$helvetica_font_family: 'Helvetica Neue';
+@include include-font($helvetica_font_family, 400, helveticaneue-thin);
+@include include-font($helvetica_font_family, 500, helveticaneue-light);
+@include include-font($helvetica_font_family, 600, helveticaneue-medium);
+@include include-font($helvetica_font_family, 500, avenir-next-medium);
 
 * {
   margin: 0;
@@ -11,7 +13,7 @@
 }
 
 html {
-  font-family: 'Helvetica Neue Light';
+  font-family: $helvetica_font_family;
 }
 
 body {

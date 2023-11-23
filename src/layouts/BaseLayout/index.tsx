@@ -23,7 +23,7 @@ const BaseLayout = ({ left, right, pagename }: BaseLayoutProps) => {
           pagename={pagename}
         />
       </header>
-      <main>
+      <main className="BaseLayout__main">
         <Outlet />
       </main>
     </div>

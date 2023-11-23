@@ -1,0 +1,17 @@
+.Separator {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #3a424c;
+    font: {
+      size: 36px;
+      weight: 500;
+    }
+    padding: {
+      top: 26px;
+      bottom: 30px;
+      left: 25px;
+      right: 25px;
+    }
+  }
+}

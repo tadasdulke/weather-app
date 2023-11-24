@@ -3,7 +3,7 @@ import RainIcon from '~images/weater-icons/rain.svg';
 import SunnyIcon from '~images/weater-icons/sunny.svg';
 import SunnyWithClouds from '~images/weater-icons/sunny-with-clouds.svg';
 
-type WeatherIconCode =
+export type WeatherIconCode =
   | '01n'
   | '02n'
   | '03n'

@@ -34,7 +34,8 @@
       "~services/*": ["src/services/*"],
       "~hooks/*": ["src/hooks/*"],
       "~utils/*": ["src/utils/*"],
-      "~context/*": ["src/context/*"]
+      "~context/*": ["src/context/*"],
+      "~api/*": ["src/api/*"]
     }
   },
   "include": ["src/**/**/*", "src/types/*", "./.eslintrc.js"],

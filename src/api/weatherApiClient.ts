@@ -26,6 +26,23 @@ const instance = axios.create({
   baseURL: Config.BaseURL,
 });
 
+instance.interceptors.response.use(
+  async (response) => {
+    return response;
+  },
+  async (error) => {
+    if (error.response.config.url === Endpoints.DailyForecast) {
+      return await Promise.resolve({
+        ...error.response,
+        status: 200,
+        data: { test: 'test' },
+      });
+    }
+
+    return await Promise.reject(error);
+  }
+);
+
 export const getCurrentWeather = async (params: WeatherForecastParams) => {
   const forecast = await instance.get<WeatherForecast>(
     Endpoints.CurrentWeather,
@@ -37,6 +54,12 @@ export const getCurrentWeather = async (params: WeatherForecastParams) => {
       },
     }
   );
+
+  return forecast;
+};
+
+export const getWeeksForecast = async () => {
+  const forecast = await instance.get(Endpoints.DailyForecast);
 
   return forecast;
 };

@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { type Searchable } from 'src/services/SearchService';
+import { useEffect,useState } from 'react';
 import type SearchService from 'src/services/SearchService';
+import { type Searchable } from 'src/services/SearchService';
 
 const useSearchService = <T>(
   searchService: SearchService<T>,

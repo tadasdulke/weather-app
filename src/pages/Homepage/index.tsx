@@ -1,11 +1,11 @@
-import useLocationContext from '~hooks/useLocationContext';
-import WeatherForecast from '~components/WeatherForecast';
-import WeatherIcon from '~utils/findWeatherIcon';
-import Separator from '~components/Separator';
-import useWeatherForecast from '~hooks/useWeatherForecast';
-import Spinner from '~common/Spinner';
-
 import './index.scss';
+
+import Spinner from '~common/Spinner';
+import Separator from '~components/Separator';
+import WeatherForecast from '~components/WeatherForecast';
+import useLocationContext from '~hooks/useLocationContext';
+import useWeatherForecast from '~hooks/useWeatherForecast';
+import WeatherIcon from '~utils/findWeatherIcon';
 
 const Homepage = () => {
   const { location } = useLocationContext();

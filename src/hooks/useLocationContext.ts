@@ -1,6 +1,7 @@
 import { useContext } from 'react';
-import LocationContext from '~context/LocationContext';
 import { Errors } from 'src/types/enums';
+
+import LocationContext from '~context/LocationContext';
 
 const useLocationContext = () => {
   const locationContextValue = useContext(LocationContext);

@@ -1,6 +1,6 @@
-import WeatherIcon, { type WeatherIconProps } from '~utils/findWeatherIcon';
-
 import './index.scss';
+
+import WeatherIcon, { type WeatherIconProps } from '~utils/findWeatherIcon';
 
 interface WeatherForecastItemProps extends WeatherIconProps {
   dayName: string;

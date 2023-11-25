@@ -1,4 +1,5 @@
 import axios, { type AxiosError } from 'axios';
+
 import { Config, Endpoints } from './config';
 import generateWeeksResponseData from './generateWeekForecastResponseData';
 import { type WeatherForecast, type WeeksForecastList } from './types';

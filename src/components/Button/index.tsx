@@ -1,5 +1,6 @@
-import classnames from 'classnames';
 import './index.scss';
+
+import classnames from 'classnames';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 

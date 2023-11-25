@@ -1,7 +1,8 @@
-import SearchIcon from '~images/search-icon.svg';
-import CancelCrossIcon from '~images/cancel-cross.svg';
-import Button from '~components/Button';
 import './index.scss';
+
+import Button from '~components/Button';
+import CancelCrossIcon from '~images/cancel-cross.svg';
+import SearchIcon from '~images/search-icon.svg';
 
 interface InputFieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
   onClear: React.MouseEventHandler<HTMLButtonElement>;

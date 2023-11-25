@@ -1,6 +1,7 @@
-import generateRandomNumber from '~utils/generateRandomNumber';
-import { type WeeksForecastList } from './types';
 import { WeatherIconCodeEnum } from '~utils/findWeatherIcon';
+import generateRandomNumber from '~utils/generateRandomNumber';
+
+import { type WeeksForecastList } from './types';
 
 const generateWeekForecastResponseData = (
   amountOfDays: number

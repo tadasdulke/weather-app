@@ -1,5 +1,6 @@
-import SearchService, { type Searchable } from './SearchService';
 import regexMatch from '~utils/regexMatch';
+
+import SearchService, { type Searchable } from './SearchService';
 
 export interface City {
   id: number;

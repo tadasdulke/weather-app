@@ -1,7 +1,9 @@
-import WeatherForecastItem from './WeatherForecastItem';
+import './index.scss';
+
 import { type WeeksForecastList } from '~api/types';
 import getNameOfTheDay from '~utils/getNameOfTheDay';
-import './index.scss';
+
+import WeatherForecastItem from './WeatherForecastItem';
 
 interface WeatherForecastProps {
   weeksForecast: WeeksForecastList;

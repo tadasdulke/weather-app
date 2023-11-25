@@ -1,13 +1,15 @@
-import { useState } from 'react';
-import InputField from '~components/InputField';
-import useSearchCitiesService from '~hooks/useSearchCitiesService';
-import { CitySearchConfig } from 'src/types/enums';
-import { type City } from 'src/services/CitySearchService';
-import CityList from '~components/CityList';
-import useLocationContext from '~hooks/useLocationContext';
-import { useNavigate } from 'react-router-dom';
 import './index.scss';
+
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { type City } from 'src/services/CitySearchService';
+import { CitySearchConfig } from 'src/types/enums';
+
+import CityList from '~components/CityList';
+import InputField from '~components/InputField';
 import { Routes } from '~components/Router';
+import useLocationContext from '~hooks/useLocationContext';
+import useSearchCitiesService from '~hooks/useSearchCitiesService';
 
 const LocationPicker = () => {
   const { setLocation } = useLocationContext();

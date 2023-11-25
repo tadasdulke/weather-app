@@ -1,8 +1,9 @@
-import Navigation from '~components/Navigation';
-import { Outlet } from 'react-router-dom';
-import useLocationContext from '~hooks/useLocationContext';
-
 import './index.scss';
+
+import { Outlet } from 'react-router-dom';
+
+import Navigation from '~components/Navigation';
+import useLocationContext from '~hooks/useLocationContext';
 
 interface BaseLayoutProps {
   left?: JSX.Element;

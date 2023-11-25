@@ -1,9 +1,10 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Homepage from '~pages/Homepage';
-import BaseLayout from '~layouts/BaseLayout';
+
 import Link from '~components/Link';
 import CloudIcon from '~images/cloud-icon.svg';
 import SettingsIcon from '~images/settings-icon.svg';
+import BaseLayout from '~layouts/BaseLayout';
+import Homepage from '~pages/Homepage';
 import LocationPicker from '~pages/LocationPicker';
 
 export enum Routes {

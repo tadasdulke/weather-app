@@ -1,5 +1,6 @@
-import cities from '~data/cities.json';
 import { type City } from 'src/services/CitySearchService';
+
+import cities from '~data/cities.json';
 
 const findLocationWithTolerance = (
   lat: number,

@@ -9,9 +9,11 @@ const useWeatherForecast = (lat: number, lon: number) => {
   const [weeksForecast, setWeeksForecast] = useState<WeeksForecastList | null>(
     null
   );
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     void (async () => {
+      setIsLoading(true);
       const [currentWeatherForecast, weeksForecastList] = await Promise.all([
         getCurrentWeather({
           lat,
@@ -19,7 +21,7 @@ const useWeatherForecast = (lat: number, lon: number) => {
         }),
         getWeeksForecast({ cnt: 6, lat, lon }),
       ]);
-
+      setIsLoading(false);
       setWeeksForecast(weeksForecastList.data);
       setCurrentWeather(currentWeatherForecast.data);
     })();
@@ -28,6 +30,7 @@ const useWeatherForecast = (lat: number, lon: number) => {
   return {
     currentWeather,
     weeksForecast,
+    isLoading,
   };
 };
 

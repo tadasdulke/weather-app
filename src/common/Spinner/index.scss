@@ -1,0 +1,10 @@
+.Spinner__spinner {
+  animation: spin 0.5s infinite linear;
+  margin: auto;
+
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

@@ -35,7 +35,8 @@
       "~hooks/*": ["src/hooks/*"],
       "~utils/*": ["src/utils/*"],
       "~context/*": ["src/context/*"],
-      "~api/*": ["src/api/*"]
+      "~api/*": ["src/api/*"],
+      "~common/*": ["src/common/*"]
     }
   },
   "include": ["src/**/**/*", "src/types/*", "./.eslintrc.js"],

@@ -14,18 +14,25 @@
   &__item {
     display: flex;
     align-items: center;
-    flex: 1 1 0px;
     font-weight: 500;
 
+    flex: {
+      grow: 1;
+      shrink: 1;
+    }
+
     &--left {
+      flex-basis: 10%;
       justify-content: start;
     }
 
     &--center {
+      flex-basis: 80%;
       justify-content: center;
     }
 
     &--right {
+      flex-basis: 10%;
       justify-content: end;
     }
   }

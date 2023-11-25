@@ -4,7 +4,6 @@ $helvetica_font_family: 'Helvetica Neue';
 @include include-font($helvetica_font_family, 400, helveticaneue-thin);
 @include include-font($helvetica_font_family, 500, helveticaneue-light);
 @include include-font($helvetica_font_family, 600, helveticaneue-medium);
-@include include-font($helvetica_font_family, 500, avenir-next-medium);
 
 * {
   margin: 0;

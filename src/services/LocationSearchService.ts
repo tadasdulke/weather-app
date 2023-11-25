@@ -2,7 +2,7 @@ import regexMatch from '~utils/regexMatch';
 
 import SearchService, { type Searchable } from './SearchService';
 
-export interface City {
+export interface Location {
   id: number;
   name: string;
   coord: {
@@ -11,25 +11,25 @@ export interface City {
   };
 }
 
-export type SearchableCity = Searchable<City>;
+export type SearchableLocation = Searchable<Location>;
 
-class CitySearchService extends SearchService<City> {
-  override search(valueToMatch: string): SearchableCity[] {
+class LocationSearchService extends SearchService<Location> {
+  override search(valueToMatch: string): SearchableLocation[] {
     for (let i = 0; i < this.fullCollection.length; i++) {
       if (this.isFull()) {
         break;
       }
 
-      const city = this.fullCollection[i];
+      const location = this.fullCollection[i];
       const regex = regexMatch(
         valueToMatch.toLowerCase(),
-        city.name.toLowerCase()
+        location.name.toLowerCase()
       );
 
       if (regex !== null) {
         this.addElement({
           match: regex,
-          ...city,
+          ...location,
         });
       }
     }
@@ -38,4 +38,4 @@ class CitySearchService extends SearchService<City> {
   }
 }
 
-export default CitySearchService;
+export default LocationSearchService;

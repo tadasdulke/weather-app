@@ -2,25 +2,25 @@ import './index.scss';
 
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { type City } from 'src/services/CitySearchService';
-import { CitySearchConfig } from 'src/types/enums';
+import { type Location } from 'src/services/LocationSearchService';
+import { LocationSearchConfig } from 'src/types/enums';
 
-import CityList from '~components/CityList';
 import InputField from '~components/InputField';
+import LocationList from '~components/LocationList';
 import { Routes } from '~components/Router';
 import useLocationContext from '~hooks/useLocationContext';
-import useSearchCitiesService from '~hooks/useSearchCitiesService';
+import useSearchLocationService from '~hooks/useSearchLocationService';
 
 const LocationPicker = () => {
   const { setLocation } = useLocationContext();
   const navigate = useNavigate();
   const [searchValue, setSearchValue] = useState<string>('');
-  const cities = useSearchCitiesService(
+  const locations = useSearchLocationService(
     searchValue,
-    CitySearchConfig.MaxAmountOfCitiesToDisplay
+    LocationSearchConfig.MaxAmountOfLocationsToDisplay
   );
 
-  const onLocationSelect = (location: City) => {
+  const onLocationSelect = (location: Location) => {
     setLocation(location);
     navigate(Routes.Homepage);
   };
@@ -39,7 +39,7 @@ const LocationPicker = () => {
         />
       </div>
 
-      <CityList onLocationSelect={onLocationSelect} cities={cities} />
+      <LocationList onLocationSelect={onLocationSelect} locations={locations} />
     </div>
   );
 };

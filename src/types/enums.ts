@@ -3,6 +3,6 @@ export enum Errors {
   NoLocationProvider = 'Location provider was not initialized!',
 }
 
-export enum CitySearchConfig {
-  MaxAmountOfCitiesToDisplay = 30,
+export enum LocationSearchConfig {
+  MaxAmountOfLocationsToDisplay = 30,
 }

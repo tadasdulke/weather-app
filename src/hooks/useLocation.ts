@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { type City } from 'src/services/CitySearchService';
+import { type Location } from 'src/services/LocationSearchService';
 
 import findLocation from '~utils/findLocation';
 
@@ -13,7 +13,7 @@ const defaultLocation = {
 };
 
 const useLocation = () => {
-  const [location, setLocation] = useState<City>(defaultLocation);
+  const [location, setLocation] = useState<Location>(defaultLocation);
   useEffect(() => {
     if (!navigator.geolocation) {
       console.log('error'); // handle this;

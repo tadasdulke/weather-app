@@ -1,4 +1,4 @@
-import { type City } from 'src/services/CitySearchService';
+import { type Location } from 'src/services/LocationSearchService';
 
 import cities from '~data/cities.json';
 
@@ -7,7 +7,7 @@ const findLocationWithTolerance = (
   lon: number,
   tolerance: number
 ) => {
-  const location = (cities as City[]).find(
+  const location = (cities as Location[]).find(
     ({ coord }) =>
       Math.abs(coord.lat - lat) <= tolerance &&
       Math.abs(coord.lon - lon) <= tolerance

@@ -5,12 +5,13 @@ import { CitySearchConfig } from 'src/types/enums';
 import { type City } from 'src/services/CitySearchService';
 import CityList from '~components/CityList';
 import useLocationContext from '~hooks/useLocationContext';
-import { redirect } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './index.scss';
 import { Routes } from '~components/Router';
 
 const LocationPicker = () => {
   const { setLocation } = useLocationContext();
+  const navigate = useNavigate();
   const [searchValue, setSearchValue] = useState<string>('');
   const cities = useSearchCitiesService(
     searchValue,
@@ -19,7 +20,7 @@ const LocationPicker = () => {
 
   const onLocationSelect = (location: City) => {
     setLocation(location);
-    redirect(Routes.Homepage);
+    navigate(Routes.Homepage);
   };
 
   return (

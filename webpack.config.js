@@ -5,7 +5,7 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-  mode: 'development', // TODO: change to env var
+  mode: process.env.NODE_ENV,
   entry: './src/index.tsx',
   devtool: 'inline-source-map',
   output: {

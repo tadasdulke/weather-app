@@ -1,4 +1,4 @@
-import { type WeatherIconCode } from '~utils/findWeatherIcon';
+import { type WeatherIconCode } from '~components/WeatherIcon';
 
 export interface WeatherForecast {
   weather: [

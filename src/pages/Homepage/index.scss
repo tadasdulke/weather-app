@@ -30,14 +30,19 @@
   }
 
   &__current-degrees {
-    font-size: 144px;
     padding-bottom: 40px;
-    font-weight: 400;
+    font: {
+      size: 144px;
+      weight: 400;
+    }
   }
 
   &__location {
-    font-size: 58px;
-    font-weight: 500;
+    font: {
+      size: 58px;
+      weight: 500;
+    }
+    text-align: center;
   }
 
   &__weather-type-container {

@@ -20,8 +20,6 @@ export type WeatherIconCode = `${WeatherIconCodeEnum}`;
 export interface WeatherIconProps extends React.SVGAttributes<SVGElement> {
   code: WeatherIconCode;
 }
-
-/// / transfer this
 const WeatherIcon = ({ code, ...restProps }: WeatherIconProps) => {
   if (code === '01n') {
     return <SunnyIcon {...restProps} />;

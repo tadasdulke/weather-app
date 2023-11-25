@@ -12,8 +12,10 @@ const Navigation = ({ right, left, location, pagename }: NavigationProps) => {
     <nav className="Navigation__container">
       <div className="Navigation__item Navigation__item--left">{left}</div>
       <div className="Navigation__item Navigation__item--center Navigation__text-container">
-        <h1 className="Navigation__text--white">{pagename}</h1>
-        <h2 className="Navigation__text--darker">{location}</h2>
+        <h1 className="Navigation__text Navigation__text--white">{pagename}</h1>
+        <h2 className="Navigation__text Navigation__text--darker">
+          {location}
+        </h2>
       </div>
       <div className="Navigation__item Navigation__item--right">{right}</div>
     </nav>

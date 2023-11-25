@@ -1,4 +1,4 @@
-import { WeatherIconCodeEnum } from '~utils/findWeatherIcon';
+import { WeatherIconCodeEnum } from '~components/WeatherIcon';
 import generateRandomNumber from '~utils/generateRandomNumber';
 
 import { type WeeksForecastList } from './types';

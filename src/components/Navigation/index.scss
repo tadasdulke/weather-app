@@ -22,17 +22,17 @@
     }
 
     &--left {
-      flex-basis: 10%;
+      flex-basis: 20%;
       justify-content: start;
     }
 
     &--center {
-      flex-basis: 80%;
+      flex-basis: 60%;
       justify-content: center;
     }
 
     &--right {
-      flex-basis: 10%;
+      flex-basis: 20%;
       justify-content: end;
     }
   }
@@ -43,9 +43,11 @@
   }
 
   &__text {
-    font-size: 28px;
+    font: {
+      weight: 500;
+      size: 28px;
+    }
     text-align: center;
-    font-weight: 400 !important;
 
     &--white {
       color: white;

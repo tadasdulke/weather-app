@@ -24,6 +24,7 @@
     "jsx": "react-jsx",
     "esModuleInterop": true,
     "isolatedModules": true,
+    "types": ["@testing-library/jest-dom"],
     "paths": {
       "~components/*": ["src/components/*"],
       "~pages/*": ["src/pages/*"],

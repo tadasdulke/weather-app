@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    'jest/globals': true,
   },
   extends: [
     'eslint:recommended',
@@ -10,9 +11,10 @@ module.exports = {
     'plugin:promise/recommended',
     'plugin:react/recommended',
     'prettier',
+    'plugin:jest/recommended',
   ],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'import', 'simple-import-sort'],
+  plugins: ['@typescript-eslint', 'import', 'simple-import-sort', 'jest'],
   root: true,
   parserOptions: {
     project: './tsconfig.json',

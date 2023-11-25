@@ -1,52 +1,27 @@
 import WeatherForecastItem from './WeatherForecastItem';
-
+import { type WeeksForecastList } from '~api/types';
+import getNameOfTheDay from '~utils/getNameOfTheDay';
 import './index.scss';
 
-const WeatherForecast = () => {
+interface WeatherForecastProps {
+  weeksForecast: WeeksForecastList;
+}
+
+const WeatherForecast = ({ weeksForecast }: WeatherForecastProps) => {
+  const highestTemps = weeksForecast.list.map(({ temp }) => temp.max);
+  const highestTemperature = Math.max(...highestTemps);
+
   return (
     <div className="WeatherForecast__container">
-      {[
-        {
-          dayName: 'FRI',
-          maxTemp: 6,
-          minTemp: 3,
-        },
-        {
-          dayName: 'SAT',
-          maxTemp: 6,
-          minTemp: 3,
-        },
-        {
-          dayName: 'SAT',
-          maxTemp: 6,
-          minTemp: 3,
-        },
-        {
-          dayName: 'SAT',
-          maxTemp: 6,
-          minTemp: 3,
-        },
-        {
-          dayName: 'SAT',
-          maxTemp: 6,
-          minTemp: 3,
-        },
-        {
-          dayName: 'SAT',
-          maxTemp: 6,
-          minTemp: 3,
-        },
-        {
-          dayName: 'SAT',
-          maxTemp: 6,
-          minTemp: 3,
-        },
-      ].map(({ dayName, maxTemp, minTemp }) => (
+      {weeksForecast.list.map(({ dt, temp, weather }) => (
         <WeatherForecastItem
-          key={dayName}
-          dayName={dayName}
-          maxTemp={maxTemp}
-          minTemp={minTemp}
+          key={dt}
+          dayName={getNameOfTheDay(new Date(dt)).slice(0, 3).toUpperCase()}
+          maxTemp={temp.max}
+          minTemp={temp.min}
+          maxTempBarHeightPercentage={(temp.max / highestTemperature) * 100}
+          minTempBarHeightPercentage={(temp.min / highestTemperature) * 100}
+          code={weather[0].icon}
         />
       ))}
     </div>

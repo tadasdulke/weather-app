@@ -22,6 +22,7 @@
   }
 
   &__icon {
+    flex: 1;
     margin-bottom: 12px;
   }
 
@@ -30,6 +31,8 @@
     align-items: end;
     width: 100%;
     column-gap: 2px;
+    height: 78px;
+    margin-top: 17px;
   }
 
   &__bar {

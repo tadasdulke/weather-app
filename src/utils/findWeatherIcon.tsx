@@ -3,18 +3,21 @@ import RainIcon from '~images/weater-icons/rain.svg';
 import SunnyIcon from '~images/weater-icons/sunny.svg';
 import SunnyWithClouds from '~images/weater-icons/sunny-with-clouds.svg';
 
-export type WeatherIconCode =
-  | '01n'
-  | '02n'
-  | '03n'
-  | '04n'
-  | '09n'
-  | '10n'
-  | '11n'
-  | '13n'
-  | '50n';
+export enum WeatherIconCodeEnum {
+  ClearSky = '01n',
+  FewClouds = '02n',
+  ScatteredClouds = '03n',
+  BrokenClouds = '04n',
+  ShowerRain = '09n',
+  Rain = '10n',
+  Thunderstorm = '11n',
+  Snow = '13n',
+  Mist = '50n',
+}
 
-interface WeatherIconProps extends React.SVGAttributes<SVGElement> {
+export type WeatherIconCode = `${WeatherIconCodeEnum}`;
+
+export interface WeatherIconProps extends React.SVGAttributes<SVGElement> {
   code: WeatherIconCode;
 }
 

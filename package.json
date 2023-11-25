@@ -7,7 +7,7 @@
   "author": "Tadas Dulke",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --open --mode development --hot",
+    "dev": "webpack-dev-server --open --mode development --hot --https",
     "build": "webpack --mode production",
     "lint": "eslint .",
     "commit": "cz",
@@ -51,7 +51,7 @@
     "style-loader": "^3.3.3",
     "ts-loader": "^9.5.1",
     "tsconfig-paths-webpack-plugin": "^4.1.0",
-    "typescript": "*",
+    "typescript": "^5.3.2",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"

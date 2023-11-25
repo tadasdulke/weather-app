@@ -23,7 +23,6 @@ const findLocation = (lat: number, lon: number) => {
   for (let i = 0; i < matchTolerances.length; i++) {
     const matchTolerance = matchTolerances[i];
     const location = findLocationWithTolerance(lat, lon, matchTolerance);
-    console.log(location);
     if (location !== null) {
       foundLocation = location;
       break;

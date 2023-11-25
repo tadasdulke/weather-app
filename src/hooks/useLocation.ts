@@ -17,18 +17,15 @@ const useLocation = () => {
     if (!navigator.geolocation) {
       console.log('error'); // handle this;
     }
-    console.log(navigator.geolocation);
     navigator.geolocation.getCurrentPosition(
       ({ coords: { latitude, longitude } }) => {
-        console.log(latitude, longitude);
         const location = findLocation(latitude, longitude);
 
         if (location !== null) {
           setLocation(location);
         }
       },
-      (err) => {
-        console.log(err);
+      () => {
         setLocation(defaultLocation);
       }
     );

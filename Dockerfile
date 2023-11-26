@@ -10,3 +10,8 @@ WORKDIR /app
 COPY package.json package.json
 COPY yarn.lock yarn.lock
 RUN yarn
+
+FROM builder as production
+WORKDIR /app
+COPY . .
+RUN yarn build

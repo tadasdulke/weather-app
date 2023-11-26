@@ -13,6 +13,7 @@ Set [open weather api key](https://home.openweathermap.org/api_keys) inside .env
 ## Development environment
 
 Install [devcontainers cli tool](https://www.npmjs.com/package/@devcontainers/cli):
+
 **Note**: devcontainer cli tool is optional. Project can run with VS Code dev containers extension too.
 
     npm install -g @devcontainers/cli

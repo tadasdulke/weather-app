@@ -5,3 +5,4 @@ data
 jest.config.js
 jest.setup.js
 scripts
+__mocks__

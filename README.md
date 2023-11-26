@@ -24,11 +24,11 @@ Startup development container:
 
 Install node_modules:
 
-    devcontainer exec --workspace-folder yarn
+    devcontainer exec --workspace-folder . yarn
 
 Start webpack development server:
 
-    devcontainer exec --workspace-folder yarn dev
+    devcontainer exec --workspace-folder . yarn dev
 
 Go to [https://localhost:3000/](https://localhost:3000/)
 

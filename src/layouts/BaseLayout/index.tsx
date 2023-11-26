@@ -6,8 +6,8 @@ import Navigation from '~components/Navigation';
 import useLocationContext from '~hooks/useLocationContext';
 
 interface BaseLayoutProps {
-  left?: JSX.Element;
-  right?: JSX.Element;
+  left?: React.ReactNode;
+  right?: React.ReactNode;
   pagename: string;
 }
 

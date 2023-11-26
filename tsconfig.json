@@ -24,7 +24,7 @@
     "jsx": "react-jsx",
     "esModuleInterop": true,
     "isolatedModules": true,
-    "types": ["@testing-library/jest-dom"],
+    "types": ["node", "jest", "@testing-library/jest-dom"],
     "paths": {
       "~components/*": ["src/components/*"],
       "~pages/*": ["src/pages/*"],
@@ -37,7 +37,9 @@
       "~utils/*": ["src/utils/*"],
       "~context/*": ["src/context/*"],
       "~api/*": ["src/api/*"],
-      "~common/*": ["src/common/*"]
+      "~common/*": ["src/common/*"],
+      "~config": ["src/config.ts"],
+      "src/*": ["src/*"]
     }
   },
   "include": ["src/**/**/*", "src/types/*", "./.eslintrc.js"],

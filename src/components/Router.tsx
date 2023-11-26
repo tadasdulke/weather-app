@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import Link from '~components/Link';
+import Link from '~common/Link';
 import CloudIcon from '~images/cloud-icon.svg';
 import SettingsIcon from '~images/settings-icon.svg';
 import BaseLayout from '~layouts/BaseLayout';

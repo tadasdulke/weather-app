@@ -21,19 +21,21 @@ export interface WeatherIconProps extends React.SVGAttributes<SVGElement> {
   code: WeatherIconCode;
 }
 const WeatherIcon = ({ code, ...restProps }: WeatherIconProps) => {
+  let IconElement = RainIcon;
+
   if (code === '01n') {
-    return <SunnyIcon {...restProps} />;
+    IconElement = SunnyIcon;
   }
 
   if (code === '02n') {
-    return <SunnyWithClouds {...restProps} />;
+    IconElement = SunnyWithClouds;
   }
 
   if (['03n', '04n'].includes(code)) {
-    return <CloudsIcon {...restProps} />;
+    IconElement = CloudsIcon;
   }
 
-  return <RainIcon {...restProps} />;
+  return <IconElement {...restProps} />;
 };
 
 export default WeatherIcon;

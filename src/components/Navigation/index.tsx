@@ -1,8 +1,8 @@
 import './index.scss';
 
 export interface NavigationProps {
-  right?: JSX.Element;
-  left?: JSX.Element;
+  right?: React.ReactNode;
+  left?: React.ReactNode;
   location: string;
   pagename: string;
 }

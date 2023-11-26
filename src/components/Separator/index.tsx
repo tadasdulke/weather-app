@@ -2,7 +2,7 @@ import './index.scss';
 
 interface SeparatorProps {
   text: string;
-  children?: JSX.Element;
+  children?: React.ReactNode;
 }
 
 const Separator = ({ text, children }: SeparatorProps) => {

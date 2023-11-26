@@ -18,7 +18,7 @@ const WeatherForecast = ({ weeksForecast }: WeatherForecastProps) => {
       {weeksForecast.list.map(({ dt, temp, weather }) => (
         <WeatherForecastItem
           key={dt}
-          dayName={getNameOfTheDay(new Date(dt)).slice(0, 3).toUpperCase()}
+          dayName={getNameOfTheDay(new Date(dt)).toUpperCase()}
           maxTemp={temp.max}
           minTemp={temp.min}
           maxTempBarHeightPercentage={(temp.max / highestTemperature) * 100}

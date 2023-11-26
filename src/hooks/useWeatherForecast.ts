@@ -1,7 +1,7 @@
-import { useEffect,useState } from 'react';
+import { useEffect, useState } from 'react';
 
-import { type WeatherForecast,type WeeksForecastList } from '~api/types';
-import { getCurrentWeather,getWeeksForecast } from '~api/weatherApiClient';
+import { type WeatherForecast, type WeeksForecastList } from '~api/types';
+import { getCurrentWeather, getWeeksForecast } from '~api/weatherApiClient';
 
 const useWeatherForecast = (lat: number, lon: number) => {
   const [currentWeather, setCurrentWeather] = useState<WeatherForecast | null>(

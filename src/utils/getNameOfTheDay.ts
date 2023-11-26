@@ -1,6 +1,6 @@
 const getNameOfTheDay = (date: Date) =>
   date.toLocaleDateString('en-EN', {
-    weekday: 'long',
+    weekday: 'short',
   });
 
 export default getNameOfTheDay;

@@ -1,6 +1,6 @@
 import './index.scss';
 
-import Button from '~components/Button';
+import Button from '~common/Button';
 import CancelCrossIcon from '~images/cancel-cross.svg';
 import SearchIcon from '~images/search-icon.svg';
 
@@ -20,7 +20,11 @@ const InputField = ({ onClear, value, onChange }: InputFieldProps) => {
         className="InputField__input"
         type="text"
       />
-      <Button onClick={onClear} className="InputField__button">
+      <Button
+        onClick={onClear}
+        className="InputField__button"
+        data-testid="cancel-input-button"
+      >
         <CancelCrossIcon />
       </Button>
     </div>

@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { type Location } from 'src/services/LocationSearchService';
 import { LocationSearchConfig } from 'src/types/enums';
 
-import InputField from '~components/InputField';
+import InputField from '~common/InputField';
 import LocationList from '~components/LocationList';
 import { Routes } from '~components/Router';
 import useLocationContext from '~hooks/useLocationContext';

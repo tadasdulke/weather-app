@@ -14,8 +14,13 @@ describe('useSearchService', () => {
     }
 
     const searchValue = '1';
+    const setErrorMock = jest.fn();
 
-    const mockedSearchService = new MockedSearchService(3, [1, 2, 3, 4, 5, 6]);
+    const mockedSearchService = new MockedSearchService(
+      3,
+      [1, 2, 3, 4, 5, 6],
+      setErrorMock
+    );
 
     const { result } = renderHook(() =>
       useSearchService<number>(mockedSearchService, searchValue)

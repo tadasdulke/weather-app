@@ -3,14 +3,18 @@ import { Errors } from 'src/types/enums';
 
 import LocationContext from '~context/LocationContext';
 
+import useGlobalError from './useGlobalError';
+
 const useLocationContext = () => {
+  const setError = useGlobalError();
   const locationContextValue = useContext(LocationContext);
 
   if (locationContextValue === null) {
-    throw new Error(Errors.NoLocationProvider);
+    setError(Errors.NoLocationProvider);
   }
 
-  return locationContextValue;
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  return locationContextValue!;
 };
 
 export default useLocationContext;

@@ -1,4 +1,8 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from 'react-router-dom';
 
 import Link from '~common/Link';
 import CloudIcon from '~images/cloud-icon.svg';
@@ -49,6 +53,10 @@ const router = createBrowserRouter([
         element: <LocationPicker />,
       },
     ],
+  },
+  {
+    path: '*',
+    element: <Navigate to={Routes.Homepage} replace />,
   },
 ]);
 

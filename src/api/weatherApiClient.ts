@@ -22,6 +22,11 @@ const commonParams = {
   appId: process.env.OPEN_WEATHER_API_KEY,
 };
 
+/*
+  Currently /forecast/daily endpoint works only with API keys which are from accounts with paid plans.
+  This is a workaround to generate a portion of data which should come from /forecast/daily.
+  If application is being tested with API key from paid account - this interceptor should be removed.
+*/
 instance.interceptors.response.use(
   async (response) => {
     return response;

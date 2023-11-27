@@ -1,16 +1,18 @@
+@import 'src/styles/variables';
+
 .LocationList {
   &__list {
     list-style-type: none;
     padding: {
       left: 37px;
     }
-    background-color: #4e555e;
+    background-color: $trout;
   }
 
   &__divider {
     height: 1px;
     width: 100%;
-    background-color: #979797;
+    background-color: $dusty-gray;
   }
 
   &__list-item {
@@ -19,7 +21,7 @@
   }
 
   &__name {
-    color: #9fa0a5;
+    color: $santas-gray;
     padding: {
       top: 24px;
       bottom: 28px;
@@ -27,13 +29,13 @@
     font-size: 28px;
 
     &--white {
-      color: #ffffff;
+      color: $white;
     }
   }
 
   &__button {
     display: flex;
     flex-direction: column;
-    background-color: #4e555e;
+    background-color: $trout;
   }
 }

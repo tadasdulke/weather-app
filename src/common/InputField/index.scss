@@ -1,11 +1,13 @@
+@import 'src/styles/variables';
+
 .InputField {
   &__container {
     display: flex;
     align-items: center;
 
-    border: 1px solid #54c7fc;
+    border: 1px solid $malibu;
     border-radius: 8px;
-    background-color: #4e555e;
+    background-color: $trout;
 
     padding: {
       top: 12px;
@@ -28,7 +30,7 @@
   &__input {
     border: none;
     background-color: inherit;
-    color: white;
+    color: $white;
     flex-grow: 2;
     min-width: 0;
     padding: {

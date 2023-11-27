@@ -1,4 +1,5 @@
 @import './mixins/include-font.scss';
+@import 'src/styles/variables';
 
 $helvetica_font_family: 'Helvetica Neue';
 @include include-font($helvetica_font_family, 400, helveticaneue-thin);
@@ -16,6 +17,6 @@ html {
 }
 
 body {
-  background-color: #3a424c;
-  color: #ffffff;
+  background-color: $bright-gray;
+  color: $white;
 }

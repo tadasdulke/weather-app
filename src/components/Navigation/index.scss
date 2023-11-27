@@ -1,6 +1,8 @@
+@import 'src/styles/variables';
+
 .Navigation {
   &__container {
-    background-color: #3a424c;
+    background-color: $bright-gray;
     padding: {
       top: 24px;
       bottom: 19px;
@@ -50,11 +52,11 @@
     text-align: center;
 
     &--white {
-      color: white;
+      color: $white;
     }
 
     &--darker {
-      color: #9fa0a5;
+      color: $santas-gray;
     }
   }
 }

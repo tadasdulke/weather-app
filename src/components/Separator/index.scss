@@ -1,8 +1,10 @@
+@import 'src/styles/variables';
+
 .Separator {
   &__container {
     display: flex;
     justify-content: space-between;
-    background-color: #3a424c;
+    background-color: $bright-gray;
     font: {
       size: 36px;
       weight: 600;

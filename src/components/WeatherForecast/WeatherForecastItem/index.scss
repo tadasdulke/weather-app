@@ -1,3 +1,5 @@
+@import 'src/styles/variables';
+
 .WeatherForecastItem {
   &__container {
     display: flex;
@@ -40,12 +42,12 @@
 
     &--high {
       background-color: rgba(241, 150, 28, 0.5);
-      border-top: 5px solid #f1961c;
+      border-top: 5px solid $carrot-orange;
     }
 
     &--low {
       background-color: rgba(107, 135, 188, 0.5);
-      border-top: 5px solid #6b87bc;
+      border-top: 5px solid $ship-cove;
     }
   }
 }
